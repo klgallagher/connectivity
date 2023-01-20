@@ -14,7 +14,7 @@
 connectivity <- function(starts, boxes, lon, lat, run, nRelease){
     #starts - a list with the same length as boxes that includes indexes used to subset particle position matrices
     #boxes - list of regions where each component of the list is a 2 column matrix with lon/lat coordinates of region boundary
-    #lon & lat = matrices of particle positions from ROMS. *Note: latitude and longitude are in 2 seperate matrices where rows = number of particles and columns = number of particle positions saved (aka timestep).
+    #lon & lat = matrices of particle positions from ROMS. *Note: latitude and longitude are in 2 seperate matrices where rows = number of particles and columns = number of particle positions saved (aka timestep). Matrices are structured such that row 1 is the position of simulated krill 1 released at release event #1 Row 2 is the position of simulated krill 1 released at release event #2, and so on. There were a total of 16 release events in these simulations, therefore, row 17 is the position of simulated krill 2 released at release event #1. 
     #run - a unique identifier associated with the model run of the particles used for saving the results (a character vector)
     #nRelease = total number of releases in model run
     
